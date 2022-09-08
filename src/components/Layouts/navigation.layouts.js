@@ -3,8 +3,6 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { useLocation, NavLink } from "react-router-dom";
 
 const NavigationLayouts = () => {
-    // const location = useLocation();
-    // console.log(location);
     const location = useLocation();
     const myTitle = " · andyanggara";
 
@@ -29,21 +27,17 @@ const NavigationLayouts = () => {
                         alt="Brand logo"
                     />
                 </NavLink>
-                {/* <Navbar.Brand href="/">Brand</Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav activeKey={location.pathname} className="ms-auto">
                         <NavLink to="/" className="nav-link me-4">
                             Home
-                            {/* <Nav.Link>ALBUMS</Nav.Link> */}
                         </NavLink>
                         <NavLink to="/albums" className="nav-link me-4">
                             Albums
-                            {/* <Nav.Link>ALBUMS</Nav.Link> */}
                         </NavLink>
                         <NavLink to="/posts" className="nav-link me-4">
                             Posts
-                            {/* <Nav.Link>POSTS</Nav.Link> */}
                         </NavLink>
                     </Nav>
                 </Navbar.Collapse>

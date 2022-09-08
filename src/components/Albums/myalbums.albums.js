@@ -11,7 +11,6 @@ const Collection = (props) => {
     const [loading, setLoading] = useState();
 
     useEffect(() => {
-        // console.log(process.env.REACT_APP_BASEURL);
         let isCancelled = false;
         if (isCancelled === false) {
             setLoading(true);
@@ -31,16 +30,10 @@ const Collection = (props) => {
     const handleLimit = (option) => {
         if (option === "+") {
             setLimit((prev) => (prev += 1));
-            // console.log("tambah");
         } else {
             setLimit((prev) => (prev -= 1));
-            // console.log("kurang");
         }
     };
-
-    // if (loading) return <Skeleton count={10} />;
-
-    // console.log(datas);
 
     return (
         <React.Fragment>
@@ -53,7 +46,6 @@ const Collection = (props) => {
                     <FaPlusCircle className="me-2 flex-shrink-0" />
                     Add
                 </Button>
-                {/* {limit > 1 && ( */}
                 <Button
                     variant="outline-danger"
                     onClick={() => handleLimit("-")}
@@ -63,14 +55,12 @@ const Collection = (props) => {
                     <FaMinusCircle className="me-2 flex-shrink-0" />
                     Remove
                 </Button>
-                {/* )} */}
             </Stack>
             {loading ? (
                 <Skeleton height={450} />
             ) : (
                 <Carousel>
                     {datas.map((data, i) => {
-                        // console.table(data);
                         return (
                             <Carousel.Item key={i}>
                                 <img className="d-block w-100" src={data.url} alt="" height={450} width={450} />

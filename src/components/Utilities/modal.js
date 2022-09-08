@@ -16,7 +16,6 @@ const Modals = (props) => {
                     Detail
                 </Button>
             </Cards>
-            {/* <h3>{props.title}</h3> */}
             <Modal size="lg" show={show} onHide={handleClose} centered>
                 <Modal.Header closeButton>
                     <Modal.Title>Detail</Modal.Title>
